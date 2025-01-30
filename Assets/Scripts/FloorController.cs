@@ -1,0 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FloorController : MonoBehaviour
+{
+    public GameObject tile1, tile2;
+    public GameObject[] tiles;
+
+    
+    void FixedUpdate()
+    {
+        tile1.transform.position -=
+            new Vector3(GameManager.instance.worldScrollingSpeed, 0, 0);
+
+        tile2.transform.position -=
+           new Vector3(GameManager.instance.worldScrollingSpeed, 0, 0);
+
+        if(tile2.transform.position.x < 0)
+        {
+            // tile1.transform.position += new Vector3(32,0,0);
+            var newTile = Instantiate(tiles[Random.Range(0, tiles.Length)],
+                tile2.transform.position + new Vector3(16, 0, 0),
+                Quaternion.identity);
+
+            Destroy(tile1);
+
+          //  var x = tile1;
+            tile1 = tile2;
+            tile2 = newTile;
+        }
+
+    }
+}
