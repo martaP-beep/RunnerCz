@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     public Text scoreText;
     public GameObject restartButton;
+    public Text coinsText;
+    int coins;
 
     float score;
 
@@ -30,6 +32,17 @@ public class GameManager : MonoBehaviour
     void IntializeGame()
     {
         inGame = true;
+
+        if (PlayerPrefs.HasKey("coins"))
+        {
+            coins = PlayerPrefs.GetInt("coins");
+        }
+        else
+        {
+            coins = 0;
+        }
+        coinsText.text = coins.ToString();
+
     }
 
     public void GameOver()
@@ -50,5 +63,13 @@ public class GameManager : MonoBehaviour
 
         score += worldScrollingSpeed;
         scoreText.text = score.ToString("0");
+    }
+
+    public void CoinCollected(int points = 1)
+    {
+        coins += points;
+        PlayerPrefs.SetInt("coins", coins);
+
+        coinsText.text = coins.ToString();
     }
 }
