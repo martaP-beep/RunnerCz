@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public GameObject restartButton;
     public Text coinsText;
+
+    public Immortality immortality;
+
+
     int coins;
 
     float score;
@@ -43,6 +47,8 @@ public class GameManager : MonoBehaviour
         }
         coinsText.text = coins.ToString();
 
+        immortality.isActive = false;
+
     }
 
     public void GameOver()
@@ -71,5 +77,25 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("coins", coins);
 
         coinsText.text = coins.ToString();
+    }
+
+    public void ImmortalityCollected()
+    {
+        if (immortality.isActive)
+        {
+            CancelImmortality();
+            CancelInvoke("CancelImmortality");
+        }
+
+        immortality.isActive = true;
+        worldScrollingSpeed += immortality.GetSpeed();
+
+        Invoke("CancelImmortality", immortality.GetDuration());
+    }
+
+    void CancelImmortality()
+    {
+        immortality.isActive = false;
+        worldScrollingSpeed -= immortality.GetSpeed();
     }
 }
