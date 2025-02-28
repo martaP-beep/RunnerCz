@@ -72,6 +72,11 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             GameManager.instance.ImmortalityCollected();
         }
+        else if (collision.gameObject.CompareTag("Magnet"))
+        {
+            Destroy(collision.gameObject);
+            GameManager.instance.MagnetCollected();
+        }
 
     }
 

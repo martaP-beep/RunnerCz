@@ -512,6 +512,7 @@ MonoBehaviour:
   restartButton: {fileID: 2099065472}
   coinsText: {fileID: 1653251759}
   immortality: {fileID: 11400000, guid: 9ac43799392f08d4c93b36ab369de3fb, type: 2}
+  magnet: {fileID: 11400000, guid: 63acfe2d87ccc02479337cb691eac9d5, type: 2}
 --- !u!4 &466065503
 Transform:
   m_ObjectHideFlags: 0
@@ -1042,7 +1043,7 @@ GameObject:
   - component: {fileID: 1328767533}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
