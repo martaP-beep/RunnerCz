@@ -130,6 +130,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2085279022}
     m_Modifications:
+    - target: {fileID: 3116838802134225529, guid: 1725e894bd2845c46b931ce92335c577, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1203483797}
+    - target: {fileID: 3116838802134225529, guid: 1725e894bd2845c46b931ce92335c577, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MagnetUpgrade
+      objectReference: {fileID: 0}
     - target: {fileID: 3681467957138216984, guid: 1725e894bd2845c46b931ce92335c577, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -225,6 +233,14 @@ PrefabInstance:
     - target: {fileID: 7492290081529126772, guid: 1725e894bd2845c46b931ce92335c577, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518859660383128361, guid: 1725e894bd2845c46b931ce92335c577, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1203483797}
+    - target: {fileID: 7518859660383128361, guid: 1725e894bd2845c46b931ce92335c577, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ImmortalityUpgrade
       objectReference: {fileID: 0}
     - target: {fileID: 8067985192282138951, guid: 1725e894bd2845c46b931ce92335c577, type: 3}
       propertyPath: m_Pivot.x
@@ -468,6 +484,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103445020}
   m_CullTransparentMesh: 1
+--- !u!114 &1138760796 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6926085878302225824, guid: 1725e894bd2845c46b931ce92335c577, type: 3}
+  m_PrefabInstance: {fileID: 85656944}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1203483796
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,6 +526,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuPanel: {fileID: 1103445020}
   storePanel: {fileID: 1241765227}
+  magnetLevelText: {fileID: 1402281892}
+  magnetButtonText: {fileID: 1138760796}
+  immortalityLevelText: {fileID: 1697906039}
+  immortalityButtonText: {fileID: 1828980405}
+  magnet: {fileID: 11400000, guid: 63acfe2d87ccc02479337cb691eac9d5, type: 2}
+  immortality: {fileID: 11400000, guid: 9ac43799392f08d4c93b36ab369de3fb, type: 2}
 --- !u!4 &1203483798
 Transform:
   m_ObjectHideFlags: 0
@@ -869,6 +902,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353407538}
   m_CullTransparentMesh: 1
+--- !u!114 &1402281892 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3806898824838058863, guid: 1725e894bd2845c46b931ce92335c577, type: 3}
+  m_PrefabInstance: {fileID: 85656944}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1404745800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1193,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640814868}
   m_CullTransparentMesh: 1
+--- !u!114 &1697906039 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6627406063693668943, guid: 1725e894bd2845c46b931ce92335c577, type: 3}
+  m_PrefabInstance: {fileID: 85656944}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1828980405 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8058180200156898102, guid: 1725e894bd2845c46b931ce92335c577, type: 3}
+  m_PrefabInstance: {fileID: 85656944}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1858286801
 GameObject:
   m_ObjectHideFlags: 0
