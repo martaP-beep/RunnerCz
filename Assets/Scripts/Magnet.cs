@@ -10,7 +10,7 @@ public class Magnet : Powerup
 
     public float GetSpeed()
     {
-        return speed.GetValue();
+        return speed.GetValue(currentLevel);
     }
 
     [SerializeField]
@@ -18,6 +18,6 @@ public class Magnet : Powerup
 
     public float GetRange()
     {
-        return range.GetValue();
+        return range.GetValue(currentLevel);
     }
 }

@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51bb4bdcb7c28e24ab4ed18bfabd7658, type: 3}
   m_Name: MagnetTime
   m_EditorClassIdentifier: 
-  value: 10
+  values:
+  - 5
+  - 10
+  - 15

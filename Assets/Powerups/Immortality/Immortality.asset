@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   duration: {fileID: 11400000, guid: fdc7a8e400cd366409d2f916f6090820, type: 2}
+  currentLevel: 1
+  maxLevel: 3
+  UpgradeCost: 0200000005000000
   speed: {fileID: 11400000, guid: 1d84223147532b9479295560485758f5, type: 2}

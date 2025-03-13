@@ -5,9 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    public GameObject menuPanel;
+    public GameObject storePanel;
+
+
+    public void OpenStore()
+    {
+        storePanel.SetActive(true);
+        menuPanel.SetActive(false);
+    }
+
+    public void CloseStore()
+    {
+        storePanel.SetActive(false);
+        menuPanel.SetActive(true);
+    }
 
     public void PlayButton()
     {
+        Debug.Log("Klik");
         SceneManager.LoadScene("Game");
     }
 
@@ -15,6 +31,9 @@ public class MenuManager : MonoBehaviour
     {
 
     }
+
+
+
 
     // Start is called before the first frame update
     void Start()
